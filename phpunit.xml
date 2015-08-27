@@ -1,0 +1,13 @@
+<phpunit bootstrap="vendor/autoload.php"
+         colors="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         processIsolation="false"
+         stopOnFailure="false"
+         syntaxCheck="true"
+>
+    <testsuites name="PVO Tests">
+        <directory>tests/</directory>
+    </testsuites>
+</phpunit>
