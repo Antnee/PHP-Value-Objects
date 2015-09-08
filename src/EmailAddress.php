@@ -24,7 +24,7 @@ class EmailAddress implements Interfaces\Pvo{
         }
         try {
             $validator->validate($value);
-        } catch (Exceptions\ValidationException $e) {
+        } catch (Exceptions\InvalidValueException $e) {
             throw new Exceptions\InvalidValueException("Value is not a valid email address", 999, $e);
         }
         $this->value = $value;
