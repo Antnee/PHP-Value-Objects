@@ -31,3 +31,16 @@ Why throw an exception? Because if your value isn't appropriate then I need some
 
 ## There Aren't Many Implementations. What Use Is This? ##
 This wasn't meant as a serious library for you to implement in your application, though I would be quite pleased if it does grow to such a state. However, the point was for people to fork it, add their own, and then submit a PR back to me so that we can add your VOs into the library. Maybe one day it will become useful to others
+
+## How To Install ##
+Installation is via [Composer](https://getcomposer.org/), of course. Simply `composer require antnee/php-value-objects` from within your project or add this to your composer.json and run `composer update`:
+
+```json
+{
+    "require": {
+        "antnee/php-value-objects": "*"
+    }
+}
+```
+
+and you will have the latest dev version. I'll tag stable releases if we ever get that far
