@@ -1,5 +1,5 @@
 <?php
-namespace PVO\Validators;
+namespace PVO\Validators\Interfaces;
 
 interface Validator {
     /**

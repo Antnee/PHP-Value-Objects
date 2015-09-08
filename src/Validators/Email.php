@@ -3,7 +3,7 @@ namespace PVO\Validators;
 
 use PVO\Exceptions;
 
-class EmailValidator implements Validator {
+class Email implements Interfaces\Validator {
     
     public function validate($value)
     {

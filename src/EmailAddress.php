@@ -7,7 +7,7 @@ namespace PVO;
  * @package PHP Value Objects (PVO)
  * @author Anthony Chambers <pvo@anthonychambers.co.uk>
  */
-class EmailAddress implements PvoInterface{
+class EmailAddress implements Interfaces\Pvo{
     private $value;
     
     /**
@@ -17,10 +17,10 @@ class EmailAddress implements PvoInterface{
      * @param \PVO\Validator $validator The validator class that you wish to use. Will default to basic internal email validator if none provided
      * @throws Exceptions\InvalidValueException If validation fails
      */
-    public function __construct($value, Validators\Validator $validator=null)
+    public function __construct($value, Validators\Interfaces\Validator $validator=null)
     {
         if (is_null($validator)) {
-            $validator = new Validators\EmailValidator;
+            $validator = new Validators\Email;
         }
         try {
             $validator->validate($value);
