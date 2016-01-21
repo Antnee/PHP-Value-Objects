@@ -7,4 +7,9 @@ class NullValidator implements Interfaces\Validator {
     {
         return true;
     }
+
+    public function __call()
+    {
+        return true;
+    }
 }

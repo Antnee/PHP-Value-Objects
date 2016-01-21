@@ -5,7 +5,7 @@ use PVO\Password;
 use PVO\Exceptions;
 use PVO\Validators\Interfaces;
 
-class DefaultPassword implements Interfaces\Validator/*, Interfaces\Password*/ {
+class DefaultPassword implements Interfaces\Validator, Interfaces\Password {
 
     public function validate($value)
     {
