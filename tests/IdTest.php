@@ -1,6 +1,8 @@
 <?php
 namespace PVO;
 
+use PVO\Validators\NullValidator;
+
 class IdTest extends \PHPUnit_Framework_TestCase
 {
     /**
@@ -33,7 +35,7 @@ class IdTest extends \PHPUnit_Framework_TestCase
     {
         $this->assertInstanceOf(
             'PVO\\Id',
-            new Id($id, new Validators\NullValidator)
+            new Id($id, new NullValidator)
         );
     }
 

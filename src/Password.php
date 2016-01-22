@@ -43,11 +43,12 @@ class Password implements Interfaces\Pvo, PasswordInterface
      * matches the current password
      *
      * @param string $password
+     * @param array $opts Verification Options
      * @return bool
      */
-    public function verify($password)
+    public function verify($password, $opts=[])
     {
-        return $this->validator->verify($this, $password);
+        return $this->validator->verify($this, $password, $opts=[]);
     }
 
     /**

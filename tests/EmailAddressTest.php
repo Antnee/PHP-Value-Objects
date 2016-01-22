@@ -1,6 +1,8 @@
 <?php
 namespace PVO;
 
+use PVO\Validators\NullValidator;
+
 class EmailAddressTest extends \PHPUnit_Framework_TestCase
 {
     /**
@@ -33,7 +35,7 @@ class EmailAddressTest extends \PHPUnit_Framework_TestCase
     {
         $this->assertInstanceOf(
             'PVO\\EmailAddress',
-            new EmailAddress($email, new Validators\NullValidator)
+            new EmailAddress($email, new NullValidator)
         );
     }
     

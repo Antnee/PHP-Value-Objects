@@ -1,6 +1,7 @@
 <?php
 namespace PVO;
 
+use PVO\Validators\NullValidator;
 use PVO\Validators\Password\BcryptPassword;
 
 class BcryptPasswordTest extends \PHPUnit_Framework_TestCase
@@ -33,10 +34,9 @@ class BcryptPasswordTest extends \PHPUnit_Framework_TestCase
      */
     public function testNullValidatorValidatesEverything($pass)
     {
-        return;
         $this->assertInstanceOf(
             'PVO\\Password',
-            new Password($pass, new Validators\NullValidator)
+            new Password($pass, new NullValidator)
         );
     }
 

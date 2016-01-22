@@ -20,9 +20,13 @@ class Sha1Password extends DefaultPassword {
         return true;
     }
 
-    public function verify(Password $pass, $string)
+    public function verify(Password $pass, $string, $opts=[])
     {
-        return sha1($string) === $pass;
+        if (isset($opts['CONSTANT_TIME_COMPARISON']) && $opts['CONSTANT_TIME_COMPARISON'] == true) {
+            return hash_equals($pass, sha1($string));
+        } else {
+            return $pass === sha1($string);
+        }
     }
 
     public function hash($string)

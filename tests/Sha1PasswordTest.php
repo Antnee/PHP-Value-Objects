@@ -1,6 +1,7 @@
 <?php
 namespace PVO;
 
+use PVO\Validators\NullValidator;
 use PVO\Validators\Password\Sha1Password;
 
 class Sha1PasswordTest extends \PHPUnit_Framework_TestCase
@@ -34,8 +35,8 @@ class Sha1PasswordTest extends \PHPUnit_Framework_TestCase
     public function testNullValidatorValidatesEverything($pass)
     {
         $this->assertInstanceOf(
-            'PVO\\Pass',
-            new Password($pass, new Validators\NullValidator)
+            'PVO\\Password',
+            new Password($pass, new NullValidator)
         );
     }
 

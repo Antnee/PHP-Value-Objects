@@ -1,6 +1,8 @@
 <?php
 namespace PVO;
 
+use PVO\Validators\PhoneNumber\UkPhoneNumber;
+
 class UKPhoneNumberTest extends \PHPUnit_Framework_TestCase
 {
     /**
@@ -10,7 +12,7 @@ class UKPhoneNumberTest extends \PHPUnit_Framework_TestCase
      */
     public function testValidUKPhoneNumber($number)
     {
-        $this->assertInstanceOf('PVO\\PhoneNumber', new PhoneNumber($number, new Validators\PhoneNumber\UkPhoneNumber));
+        $this->assertInstanceOf('PVO\\PhoneNumber', new PhoneNumber($number, new UkPhoneNumber));
     }
     
     /**
@@ -21,7 +23,7 @@ class UKPhoneNumberTest extends \PHPUnit_Framework_TestCase
      */
     public function testInvalidUKPhoneNumber($number)
     {
-        new PhoneNumber($number, new Validators\PhoneNumber\UkPhoneNumber);
+        new PhoneNumber($number, new UkPhoneNumber);
     }
     
     public function validUKPhoneNumberProvider()

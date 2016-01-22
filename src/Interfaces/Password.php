@@ -2,5 +2,5 @@
 namespace PVO\Interfaces;
 
 interface Password {
-    public function verify($password);
+    public function verify($password, $opts=[]);
 }

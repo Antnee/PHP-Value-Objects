@@ -15,7 +15,7 @@ class DefaultPassword implements Interfaces\Validator, Interfaces\Password {
         return true;
     }
 
-    public function verify(Password $pass, $string)
+    public function verify(Password $pass, $string, $opts=[])
     {
         return password_verify($string, $pass);
     }
