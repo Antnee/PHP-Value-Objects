@@ -48,7 +48,7 @@ class Password implements Interfaces\Pvo, PasswordInterface
      */
     public function verify($password, $opts=[])
     {
-        return $this->validator->verify($this, $password, $opts=[]);
+        return $this->validator->verify($this, $password, $opts);
     }
 
     /**
