@@ -1,4 +1,4 @@
-# PHP Value Objects
+# PHP Value Objects [![Build Status](https://travis-ci.org/Antnee/PHP-Value-Objects.svg?branch=master)](https://travis-ci.org/Antnee/PHP-Value-Objects)
 
 *This is a proof-of-concept and very much a work-in-progress*
 
