@@ -8,7 +8,7 @@ class NullValidator implements Interfaces\Validator {
         return true;
     }
 
-    public function __call()
+    public function __call($name, $args)
     {
         return true;
     }
